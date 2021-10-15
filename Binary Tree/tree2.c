@@ -106,6 +106,15 @@ void levelOrder(node *root)
 	}
 }
 
+int size(node *root)
+{
+	// if(root==NULL) return -1;
+	// int left = size(root->left);
+	// int right = size(root->right);
+	// return (left>right?left:right)+1;
+	if(root==NULL) return 0;
+	return size(root->left)+1+size(root->right);
+}
 
 int main()
 {
@@ -121,6 +130,7 @@ int main()
 	root = insert(root,8);
 	root = insert(root,10);
 	levelOrder(root);
+	printf("\n Size of our Tree is %d",size(root));
 	getchar();
 	return 0;
 }
