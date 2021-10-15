@@ -4,8 +4,11 @@ public class subsets1 {
 		Scanner sc = new Scanner(System.in);
 		//String s = sc.next();
 		int[] arr = {1,2,3,4,5};
-		List<List<Integer>> powerset  = getPowerSetForArray(arr,0);
-		System.out.println(powerset+"\nSize="+powerset.size());
+		String s = "Ram";
+		// List<List<Integer>> powerset  = getPowerSetForArray(arr,0);
+		// System.out.println(powerset+"\nSize="+powerset.size());
+		List<String> list = getPowerSetForString(s,0);
+		System.out.println(list+"\nSize="+list.size());
 	}
 	static List<List<Integer>> getPowerSetForArray(int[] arr,int curr)
 	{
@@ -32,6 +35,25 @@ public class subsets1 {
 			ans.add(new ArrayList<>(list));
 		}
 		//System.out.println("curr"+curr+"=>"+prev_result+"\n-->"+ans);
+		return ans;
+	}
+
+	static List<String> getPowerSetForString(String s,int curr)
+	{
+		if(curr==s.length()-1)
+		{
+			List<String> list = new ArrayList<>();
+			list.add("");
+			list.add(s.charAt(curr)+"");
+			return list;
+		}
+		List<String> prev = getPowerSetForString(s, curr+1);
+		return combine(s, curr, prev);
+	}
+	static List<String> combine(String s,int curr,List<String>prev)
+	{
+		List<String> ans = new ArrayList<>(prev);
+		for(String sub:prev) ans.add(s.charAt(curr)+sub);
 		return ans;
 	}
 }
