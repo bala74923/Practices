@@ -1,0 +1,2 @@
+// To Pull The Repo
+git pull https://github.com/bala74923/Practices.git
