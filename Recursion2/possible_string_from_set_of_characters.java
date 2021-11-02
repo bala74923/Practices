@@ -1,5 +1,5 @@
 // refer https://www.geeksforgeeks.org/print-all-combinations-of-given-length/
-
+package Recursion2;
 import java.util.*;
 public class possible_string_from_set_of_characters {
 	public static void main(String[] args) {

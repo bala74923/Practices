@@ -1,3 +1,4 @@
+package Recursion;
 import java.util.*;
 public class palindromic_partition {
 	public static void main(String[] args) {

@@ -1,3 +1,4 @@
+package Recursion2;
 import java.util.*;
 //refer https://www.geeksforgeeks.org/find-all-even-length-binary-sequences-with-same-sum-of-first-and-second-half-bits/
 public class even_length_binary_sequence {
